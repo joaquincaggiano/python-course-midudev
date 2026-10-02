@@ -1,4 +1,7 @@
-# Transformar un tipo de dato a otro
+###
+# 03 - casting de types
+# Transformar un tipo de un valor a otro
+###
 
 print("Conversion de tipos:")
 print(int("100"))
