@@ -62,3 +62,30 @@ if age >= 18:
     print("Quédate en casa")
 else:
   print("No puedes entrar a la discoteca")
+
+print("\nEvaluar números como booleanos")
+number = 5
+if number:
+  print("El número no es cero")
+
+number = 0
+if number:
+  print("Aquí no entrará nunca")
+
+print("\nEvaluar strings como booleanos")
+string = "Hello"
+if string:
+  print("La cadena no está vacía")
+
+string = ""
+if string:
+  print("Aquí no entrará nunca")
+else:
+  print("La cadena está vacía")
+
+print("\nCondición ternaria")
+# las ternarias, es una forma concisa de un if-else en una línea de código
+# [código si cumple la condición] if [condicion] else [codigo si no cumple]
+edad = 17
+mensaje = "Es mayor de edad" if edad >= 18 else "Es menor de edad"
+print(mensaje)
