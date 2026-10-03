@@ -5,7 +5,7 @@
 
 # Módulo del sistema operativo
 import os
-os.system("clear")
+_ = os.system("clear")
 
 print("\nEjercicio 1: Imprimir mensajes")
 print("Escribe un programa que imprima tu nombre y tu ciudad en líneas separadas.")

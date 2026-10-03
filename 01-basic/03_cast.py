@@ -5,7 +5,7 @@
 
 # Módulo del sistema operativo
 import os
-os.system("clear")
+_ = os.system("clear")
 
 print("Conversion de tipos:")
 print(int("100"))

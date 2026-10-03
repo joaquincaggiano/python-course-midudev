@@ -7,7 +7,7 @@
 
 # Módulo del sistema operativo
 import os
-os.system("clear")
+_ = os.system("clear")
 
 print("Hello, World!")
 
