@@ -5,6 +5,10 @@
 # TODA TU VIDA. Desde hoy hasta el fin de los tiempos
 ###
 
+# Módulo del sistema operativo
+import os
+os.system("clear")
+
 print("Hello, World!")
 
 print("Hello", "World", "!")

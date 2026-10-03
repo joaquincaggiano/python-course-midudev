@@ -3,6 +3,10 @@
 # La función input() permite obtener datos del usuario a través de la consola.
 ###
 
+# Módulo del sistema operativo
+import os
+os.system("clear")
+
 print("Hola, ¿cómo te llamas?")
 name = input()
 print(f"Hola, {name}!")

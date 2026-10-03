@@ -4,6 +4,10 @@
 # Python es un lenguaje de tipado dinámico y de tipado fuerte.
 ###
 
+# Módulo del sistema operativo
+import os
+os.system("clear")
+
 my_name = "Joaquín"
 print(my_name)
 

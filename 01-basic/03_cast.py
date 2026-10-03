@@ -3,6 +3,10 @@
 # Transformar un tipo de un valor a otro
 ###
 
+# Módulo del sistema operativo
+import os
+os.system("clear")
+
 print("Conversion de tipos:")
 print(int("100"))
 print(type(int("100")), end="\n\n")

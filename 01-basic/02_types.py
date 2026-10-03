@@ -4,6 +4,10 @@
 # int, float, complex, str, bool, NoneType, list, tuple, dict, range, set...
 ###
 
+# Módulo del sistema operativo
+import os
+os.system("clear")
+
 print("int:")
 print(10)
 print(-5)
