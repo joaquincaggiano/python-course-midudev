@@ -65,3 +65,21 @@ print(persona.items())
 
 for key, value in persona.items():
   print(f"{key}: {value}")
+
+# Ejercicio find_first_sum utilizando diccionarios
+def find_first_sum(nums: list[int], goal: int):
+  seen: dict[int, int] = {}  # diccionario para guardar el número y su index
+
+  for index, value in enumerate(nums):
+    missing = goal - value
+
+    if missing in seen:
+      return [seen[missing], index]
+      
+    seen[value] = index
+
+  return None
+
+nums = [4, 5, 6, 2]
+goal = 8
+print(find_first_sum(nums, goal))
