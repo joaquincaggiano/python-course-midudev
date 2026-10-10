@@ -54,3 +54,93 @@ text = "Mi número de teléfono es +34 688999999 apúntalo vale?"
 pattern = r"\+34 \d{9}"
 found_phone_number = re.search(pattern, text)
 if found_phone_number: print(f"Encontré el número de teléfono {found_phone_number.group()}")
+
+# --------------------
+
+# \w: Coincide con cualquier caracter alfanumérico (a-z, A-Z, 0-9, _)
+print("\n\\w coincidir cualquier caracter alfanumérico:")
+text = "@@el_rubius_69$!"
+pattern = r"\w"
+found = re.findall(pattern, text)
+print(found) # ['e', 'l', '_', 'r', 'u', 'b', 'i', 'u', 's', '_', '6', '9']
+
+# --------------------
+
+# \s: Coincide con cualqueir espacio en blanco (espacio, tabulación, salto de línea)
+print("\n\\s coincidir con cualquier espacio en blanco:")
+text = "Hola mundo\n¿Cómo estás?\t"
+pattern = r"\s"
+matches = re.findall(pattern, text)
+print(matches)
+
+# --------------------
+
+# ^: Coincide con el principio de una cadena
+print("\n^: Coincide con el principio de una cadena:")
+username = "423_name%22" 
+pattern = r"^\w" # validar nombre de usuario
+
+valid = re.search(pattern, username)
+
+if valid: print("El nombre de usuario es válido")
+else: print("El nombre de usuario no es válido")
+
+phone = "+34 688999999"
+pattern = r"^\+\d{1,3} " # es importante el espacio al final, porque sino esto sería valido: +3412345
+
+valid = re.search(pattern, phone)
+
+if valid: print("El número de teléfono es válido")
+else: print("El número de teléfono no es válido")
+
+# --------------------
+
+# $: Coincide con el final de una cadena
+print("\n$: Coincide con el final de una cadena:")
+text = "Hola mundo."
+pattern = r"mundo$"
+
+valid = re.search(pattern, text)
+
+if valid: print("La cadena es válida")
+else: print("La cadena no es válida")
+
+# --------------------
+
+# EJERCICIO 1
+# Valida que un correo sea de gmail
+print("\nEjercicio 1: Valida que un correo sea de gmail")
+text = "midudev@gmail.com"
+pattern = r"^\w+@gmail.com$"
+valid = re.search(pattern, text)
+
+if valid: print("El correo es válido")
+else: print("El correo no es válido")
+
+# --------------------
+
+# EJERCICIO 2:
+# Tenemos una lista de archivos, necesitamos saber los nombres de los ficheros con extension .txt
+print("\nEjercicio 2: saber los nombres de los ficheros con extension .txt")
+files = "file1.txt file2.pdf midu-of.webp secret.txt"
+pattern = r"\w+\.txt"
+valid_files = re.findall(pattern, files)
+print(f"Archivos .txt: {valid_files}")
+
+# --------------------
+
+# \b: Coincide con el principio o final de una palabra
+print("\n\\b: Coincide con el principio o final de una palabra:")
+text = "casa casada cosa cosas casado casa"
+pattern = r"\bc.sa\b"
+
+found = re.findall(pattern, text)
+print(found)
+
+# |: Coincidr con una opción u otra
+print("\n|: Coincidr con una opción u otra:")
+fruits = "platano, piña, manzana, aguacate, palta, pera, aguacate, aguacate"
+pattern = r"palta|aguacate|p..a|\b\w{7}\b"
+
+matches = re.findall(pattern, fruits)
+print(matches)
