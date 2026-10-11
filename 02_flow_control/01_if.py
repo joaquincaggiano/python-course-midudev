@@ -3,9 +3,9 @@
 # Permiten ejecutar bloques de código solo si se cumplen ciertas condiciones.
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 print("\nSentencia simple condicional")
 

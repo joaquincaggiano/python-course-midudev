@@ -4,9 +4,9 @@
 # Fundamentales para el control de flujo y la lógica en programación.
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 print("\nOperadores de comparación:")
 print("5 > 3:", 5 > 3)        # True

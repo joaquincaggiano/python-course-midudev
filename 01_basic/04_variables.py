@@ -4,9 +4,9 @@
 # Python es un lenguaje de tipado dinámico y de tipado fuerte.
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 my_name = "Joaquín"
 print(my_name)

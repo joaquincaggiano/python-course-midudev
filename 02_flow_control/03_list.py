@@ -4,9 +4,9 @@
 # Pueden contener elementos de diferentes tipos.
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 print("\nCrear listas")
 lista1 = [1, 2, 3, 4, 5] # Lista de enteros

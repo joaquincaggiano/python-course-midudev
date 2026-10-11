@@ -5,9 +5,9 @@
 # TODA TU VIDA. Desde hoy hasta el fin de los tiempos
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 print("Hello, World!")
 

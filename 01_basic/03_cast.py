@@ -3,9 +3,9 @@
 # Transformar un tipo de un valor a otro
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 print("Conversion de tipos:")
 print(int("100"))

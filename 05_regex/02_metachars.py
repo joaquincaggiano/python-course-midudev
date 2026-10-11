@@ -3,9 +3,9 @@
 # Los metacaracteres son simbolos especiales con significados especificos en las expresiones regulares
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 # Módulo de regex
 import re

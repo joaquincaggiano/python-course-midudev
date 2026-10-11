@@ -2,9 +2,9 @@
 # EJERCICIOS (while)
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 # Ejercicio 1: Cuenta atrás
 # Imprime los números del 10 al 1 usando un bucle while.

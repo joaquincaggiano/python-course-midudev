@@ -4,11 +4,11 @@
 # Sirven para almacenar datos relacionados.
 ###
 
-# Módulo del sistema operativo
-import os
 from typing import Any
 
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 # ejemplo tipico de diccionario
 persona: dict[str, Any] = {

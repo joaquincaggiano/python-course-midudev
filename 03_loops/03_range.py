@@ -3,9 +3,9 @@
 # Permite crear una secuencia de números. Puede ser útil para for, pero no solo para eso
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 print("\nRange:")
 print("\nRange desde 0 a 9:")

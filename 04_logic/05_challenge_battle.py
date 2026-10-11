@@ -35,9 +35,9 @@ resultado = battle(lista_a, lista_b)  # -> "x"
 # Resultado: "x"
 """
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 def battle(list_a: list[int], list_b: list[int]):
   points_a = sum(list_a)

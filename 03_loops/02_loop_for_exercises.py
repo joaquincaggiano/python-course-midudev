@@ -2,9 +2,9 @@
 # EJERCICIOS (for)
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 # Ejercicio 1: Imprimir números pares
 # Imprime todos los números pares del 2 al 20 (inclusive) usando un bucle for.

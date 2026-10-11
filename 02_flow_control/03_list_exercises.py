@@ -2,9 +2,9 @@
 # EJERCICIOS
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 # Ejercicio 1: El mensaje secreto
 # Dada la siguiente lista:

@@ -15,9 +15,9 @@ Crea una función en Python que reciba una cadena de texto. Esta función debe c
 - En el caso de que no aparezca ninguna de las dos letras en la cadena, se entiende que el equilibrio se mantiene (0 = 0), por lo que la función debe retornar True.
 """
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 # Mi resolución
 # def check_is_balanced(text: str):

@@ -7,9 +7,9 @@ goal = 8
 find_first_sum(nums, goal)  # [2, 3]
 """
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 def find_first_sum(nums: list[int], goal: int):
   for i, num in enumerate(nums):

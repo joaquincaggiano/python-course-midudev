@@ -3,9 +3,9 @@
 # Los métodos más importantes para trabajar con listas
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 list1 = ["a", "b", "c", "d"]
 

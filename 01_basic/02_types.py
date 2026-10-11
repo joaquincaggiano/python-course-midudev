@@ -4,9 +4,9 @@
 # int, float, complex, str, bool, NoneType, list, tuple, dict, range, set...
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 print("int:")
 print(10)

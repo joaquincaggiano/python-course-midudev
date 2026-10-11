@@ -15,9 +15,9 @@
 - Manipulación del texto: Extraer, reemplazar y modificar partes de la cadena de texto fácilmente
 """
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 print("\nMi primer Regex:")
 # 1. Importar el módulo de regex

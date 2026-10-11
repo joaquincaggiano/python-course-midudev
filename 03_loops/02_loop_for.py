@@ -3,9 +3,9 @@
 # Permiten ejecutar un bloque de código repetidamente mientras ITERA un iterable o una lista
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 print("\nBucle for:")
 fruits = ["apple", "banana", "cherry"]

@@ -3,9 +3,9 @@
 # Usa siempre que puedas los métodos que has aprendido
 ###
 
-# Módulo del sistema operativo
-import os
-_ = os.system("clear")
+# Limpiar la terminal
+import subprocess
+_ = subprocess.run(["clear"], check=False)
 
 # Ejercicio 1: Añadir y modificar elementos
 # Crea una lista con los números del 1 al 5.
