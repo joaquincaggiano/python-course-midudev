@@ -5,7 +5,7 @@ import subprocess
 _ = subprocess.run(["clear"], check=False)
 
 # Módulo de fechas y horas
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 # Módulo de localización
 import locale
 
@@ -33,7 +33,13 @@ print("\nFormatear fecha con día y mes en español:")
 formatted_date = now.strftime("%d de %B de %Y")
 print(formatted_date)
 
-# 4. Operaciones con fechas (sumar/restar dias, minutos, horas, meses)
+# 4. Convertir una cadena de texto a fecha
+print("\nConvertir una cadena de texto a fecha:")
+date_string = "2026-10-21"
+date = datetime.strptime(date_string, "%Y-%m-%d")
+print(date)
+
+# 5. Operaciones con fechas (sumar/restar dias, minutos, horas, meses)
 print("\nOperaciones con fechas:")
 print(f"Hoy: {now}")
 yesterday = now - timedelta(days=1)
@@ -43,7 +49,7 @@ print(f"Mañana: {tomorrow}")
 one_hour_later = now + timedelta(hours=1)
 print(f"Una hora después: {one_hour_later}")
 
-# 5. Obtener componentes individuales de una fecha
+# 6. Obtener componentes individuales de una fecha
 print("\nObtener componentes individuales de una fecha:")
 print(f"Año: {now.year}")
 print(f"Mes: {now.month}")
@@ -53,9 +59,20 @@ print(f"Minuto: {now.minute}")
 print(f"Segundo: {now.second}")
 print(f"Microsegundo: {now.microsecond}")
 
-# 6. Calcular la diferencia entre dos fechas
+# 7. Calcular la diferencia entre dos fechas
 print("\nCalcular la diferencia entre dos fechas:")
 date1 = datetime.now()
 date2 = datetime(2026, 10, 21)
 difference = date2 - date1
 print(f"Diferencia entre las fechas: {difference}")
+
+# 8. Reemplazar un componente de una fecha
+print("\nReemplazar un componente de una fecha:")
+date = datetime.now()
+date = date.replace(hour=10, minute=30, second=0)
+print(date)
+
+# 9. Fecha en UTC
+print("\nFecha en UTC:")
+utc_date = datetime.now(timezone.utc)
+print(utc_date)
