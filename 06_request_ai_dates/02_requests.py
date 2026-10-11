@@ -10,7 +10,7 @@ import urllib.request
 import urllib.error
 import json
 
-api_posts = "https://jsonplaceholder.typicode.com/posts/"
+api_posts = "https://jsonplaceholder.typicode.com/posts"
 
 try:
   response = urllib.request.urlopen(api_posts)
@@ -33,8 +33,8 @@ response = requests.get(api_posts)
 # json.dumps para convertir el JSON a un string legible
 # ensure_ascii=False para que no se convierta a ASCII
 # indent=2 para que el JSON se imprima con indentación
-# [:10] para que se imprima solo los primeros 10 elementos
-print(json.dumps(response.json()[:10], indent=2, ensure_ascii=False))
+# [:10] para que se imprima solo los primeros 5 elementos
+print(json.dumps(response.json()[:5], indent=2, ensure_ascii=False))
 
 print("\nPOST:")
 input = {
@@ -47,3 +47,39 @@ try:
   print(json.dumps(response.json(), indent=2, ensure_ascii=False))
 except requests.exceptions.RequestException as e:
   print(f"Error: {e}")
+
+print("\nPUT:")
+input = {
+  "title": "Test Post",
+  "body": "This is a test post",
+  "userId": 1,
+}
+try:
+  response = requests.put(f"{api_posts}/1", json=input)
+  print(json.dumps(response.json(), indent=2, ensure_ascii=False))
+except requests.exceptions.RequestException as e:
+  print(f"Error: {e}")
+
+# Utilizar la API de OpenAI
+OPENAI_KEY = "sk-XXXXX"
+
+def call_openai_gpt(api_key: str, prompt: str):
+  url = "https://api.openai.com/v1/chat/completions"
+  headers = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {api_key}"
+  }
+  data = {
+    "model": "gpt-4o-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": prompt
+      }
+    ]
+  }
+  response = requests.post(url, headers=headers, json=data)
+  return response.json()
+
+api_response = call_openai_gpt(OPENAI_KEY, "¿Qué es la IA?")
+print(json.dumps(api_response["choices"][0]["message"]["content"], indent=2, ensure_ascii=False))
